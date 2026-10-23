@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Syndic CRM · Sistema de gestão condominial para síndico profissional e administradoras</title>
+<meta name="description" content="Syndic CRM: sistema de gestão condominial com financeiro, conciliação bancária, reembolso do síndico, manutenções, portaria, reservas, comunicados e Syndic IA. Em fase de testes.">
+<link rel="icon" href="data:,">
+<link rel="preload" as="image" href="img/visao-geral.webp" fetchpriority="high">
+<style>
+:root{--navy:#152d4a;--navy2:#0d3248;--lgreen:#97c342;--blue:#1e87bc;--teal:#178888;--green:#15803d;--green-d:#116632;--bg:#f6f8fb;--line:#e3e8f0;--txt:#1d2433;--mut:#4a5568}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--txt);background:#fff}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--navy2)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;background:#fff;padding:12px;z-index:9}
+:focus-visible{outline:3px solid #f59e0b;outline-offset:2px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);z-index:5}
+.bar{display:flex;align-items:center;gap:20px;min-height:68px}
+.logo{font-weight:800;font-size:1.3rem;color:var(--navy);text-decoration:none;display:flex;align-items:center;min-height:48px}
+.logo span{color:var(--green)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:flex;align-items:center;min-height:48px;padding:0 12px;text-decoration:none;color:var(--txt);font-weight:500}
+nav a:hover{color:var(--navy2)}
+.bar .btn{margin-left:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:10px;font-weight:700;text-decoration:none;border:2px solid transparent}
+.btn-g{background:var(--green);color:#fff}.btn-g:hover{background:var(--green-d)}
+.btn-o{border-color:var(--navy);color:var(--navy);background:#fff}.btn-o:hover{background:var(--bg)}
+.hero{background:linear-gradient(180deg,#eaf4f9,#fff);padding:56px 0 40px;text-align:center}
+.tag{display:inline-block;background:#fff7e6;color:#8a4b00;border:1px solid #f5d9a8;border-radius:99px;padding:4px 14px;font-size:.85rem;font-weight:600}
+h1{font-size:clamp(1.8rem,4vw,3rem);line-height:1.15;color:var(--navy);margin:16px auto 14px;max-width:900px}
+.hero p.sub{font-size:1.15rem;color:var(--mut);max-width:720px;margin:0 auto 26px}
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.flogo{background:#fff;display:inline-block;padding:8px 12px;border-radius:10px}
+.frame{max-width:1040px;margin:40px auto 0;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 20px 50px rgba(15,35,80,.12);overflow:hidden}
+.frame .dots{display:flex;gap:6px;align-items:center;padding:10px 14px;background:#f1f4f9;border-bottom:1px solid var(--line);font-size:.8rem;color:var(--mut)}
+.frame .dots i{width:10px;height:10px;border-radius:50%;background:#cfd6e2}
+.frame .dots b{margin-left:12px;font-weight:500;background:#fff;border-radius:6px;padding:2px 10px}
+section{padding:64px 0}
+.alt{background:var(--bg)}
+h2{font-size:clamp(1.5rem,3vw,2.1rem);color:var(--navy);line-height:1.2;margin:0 0 12px}
+.lead{color:var(--mut);max-width:720px;margin:0 0 32px}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:32px 0}
+.benefits div{border:1px solid var(--line);border-radius:12px;padding:18px;background:#fff}
+.benefits strong{display:block;color:var(--navy)}
+.benefits span{color:var(--mut);font-size:.95rem}
+.group{margin-bottom:40px}
+.group h3{font-size:1.15rem;color:var(--navy2);border-left:4px solid var(--lgreen);padding-left:10px;margin:0 0 16px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{border-bottom:1px solid var(--line);aspect-ratio:800/617;object-fit:cover;object-position:top}
+.card h4{margin:14px 16px 4px;font-size:1.02rem;color:var(--navy)}
+.card p{margin:0 16px 16px;color:var(--mut);font-size:.93rem}
+.split{display:grid;grid-template-columns:1fr 1.15fr;gap:48px;align-items:center}
+.split.rev>:first-child{order:2}
+.split img{border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 30px rgba(15,35,80,.10)}
+ul.check{padding:0;list-style:none}ul.check li{padding-left:28px;position:relative;margin:8px 0}
+ul.check li:before{content:"";position:absolute;left:4px;top:.45em;width:12px;height:7px;border-left:3px solid var(--teal);border-bottom:3px solid var(--teal);transform:rotate(-45deg)}
+.stack{display:grid;gap:16px}
+.who{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.who article{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.who h3{color:var(--navy);margin-top:0}
+details{border:1px solid var(--line);border-radius:10px;background:#fff;margin-bottom:10px}
+summary{cursor:pointer;min-height:48px;display:flex;align-items:center;padding:10px 18px;font-weight:600;color:var(--navy)}
+details p{margin:0;padding:0 18px 16px;color:var(--mut)}
+.final{background:var(--navy);color:#fff;text-align:center}
+.final h2{color:#fff}.final p{color:#d6def0}
+.final .btn-o{background:transparent;color:#fff;border-color:#fff}.final .btn-o:hover{background:rgba(255,255,255,.1)}
+footer{background:#0d3248;color:#c8d2e8;padding:40px 0;font-size:.93rem}
+footer a{color:#fff;display:inline-flex;min-height:48px;align-items:center}
+footer strong{color:#fff}
+@media (max-width:900px){nav{display:none}.benefits{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr 1fr}.split,.who{grid-template-columns:1fr}.split.rev>:first-child{order:0}}
+@media (max-width:560px){.benefits,.grid{grid-template-columns:1fr}.bar .btn{padding:0 14px;font-size:.92rem}section{padding:48px 0}.ctas .btn{width:100%}}
+.kicker{display:flex;align-items:center;gap:12px;margin:0 0 10px;font-size:.95rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0f6b6b}
+.kicker:before{content:"";width:44px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--lgreen),var(--teal))}
+section h2{font-size:clamp(1.75rem,3.4vw,2.5rem);font-weight:800;letter-spacing:-.01em}
+.tint-b{background:#eef3fb}.tint-g{background:#eef7f1}
+.final .kicker{color:#c5e48f;justify-content:center}.final .kicker:before{background:var(--lgreen)}
+section+section{border-top:1px solid var(--line)}
+@media (max-width:560px){.grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;margin:0 -20px;padding-left:20px;padding-right:20px}.grid .card{flex:0 0 82%;scroll-snap-align:start}}
+</style>
+</head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header><div class="wrap bar">
+<a class="logo" href="/"><img src="img/syndic-logo.svg" width="113" height="48" alt="Syndic CRM" fetchpriority="high"></a>
+<nav aria-label="Principal"><ul>
+<li><a href="#modulos">Módulos</a></li><li><a href="#ia">Syndic IA</a></li><li><a href="#financeiro">Financeiro</a></li><li><a href="#para-quem">Para quem</a></li><li><a href="#faq">Dúvidas</a></li></ul></nav>
+<a class="btn btn-g" href="https://demo.crm-syndic.com.br" rel="noopener">Ver demonstração</a>
+</div></header>
+<main id="conteudo">
+<section class="hero"><div class="wrap">
+<span class="tag">Em fase de testes</span>
+<h1>Sistema de gestão condominial para síndico profissional e administradoras</h1>
+<p class="sub">Financeiro, manutenções, portaria, reservas, comunicados e um assistente com IA em um só painel, para acompanhar um ou vários condomínios.</p>
+<div class="ctas">
+<a class="btn btn-g" href="https://demo.crm-syndic.com.br" rel="noopener">Ver demonstração</a>
+<a class="btn btn-o" href="https://wa.me/5521978788211" rel="noopener">Falar no WhatsApp</a>
+</div>
+<div class="frame"><div class="dots" aria-hidden="true"><i></i><i></i><i></i><b>app.crm-syndic.com.br</b></div>
+<img src="img/visao-geral.webp" width="1200" height="1012" alt="Painel de visão geral do Syndic CRM com tarefas pendentes, próximos eventos, resumo financeiro e indicadores do condomínio" fetchpriority="high"></div>
+</div></section>
+
+<div class="wrap"><div class="benefits" role="list">
+<div role="listitem"><strong>Tudo em um painel</strong><span>Financeiro, operação, portaria e comunicação no mesmo lugar.</span></div>
+<div role="listitem"><strong>Vários condomínios</strong><span>Troque de condomínio no topo da tela.</span></div>
+<div role="listitem"><strong>Prestação de contas</strong><span>Relatórios em PDF e planilha para o conselho.</span></div>
+<div role="listitem"><strong>Syndic IA</strong><span>Respostas com base na convenção e no regimento.</span></div>
+</div></div>
+
+<section id="modulos" class="alt"><div class="wrap">
+<p class="kicker">Módulos</p><h2>Módulos do sistema</h2>
+<p class="lead">Telas reais do Syndic CRM, no condomínio de demonstração.</p>
+<div class="group"><h3>Financeiro</h3><div class="grid">
+<div class="card"><img src="img/financeiro.webp" width="800" height="617" loading="lazy" decoding="async" alt="Módulo financeiro com receitas, despesas e gráficos"><h4>Módulo financeiro</h4><p>Receitas, despesas, saldos e gráficos do mês.</p></div>
+<div class="card"><img src="img/bancario.webp" width="800" height="617" loading="lazy" decoding="async" alt="Módulo bancário com contas e conciliação"><h4>Módulo bancário</h4><p>Contas, extratos, conciliação e boletos.</p></div>
+<div class="card"><img src="img/patrimonio.webp" width="800" height="617" loading="lazy" decoding="async" alt="Gestão de patrimônio do condomínio"><h4>Gestão de patrimônio</h4><p>Portfólio de recursos, contratos de locação e receitas.</p></div>
+</div></div>
+<div class="group"><h3>Operação</h3><div class="grid">
+<div class="card"><img src="img/manutencoes.webp" width="800" height="617" loading="lazy" decoding="async" alt="Quadro de manutenções e ordens de serviço por etapa"><h4>Manutenções e serviços</h4><p>Preventivas e ordens de serviço em quadro de etapas.</p></div>
+<div class="card"><img src="img/agenda.webp" width="800" height="617" loading="lazy" decoding="async" alt="Agenda e calendário condominial"><h4>Agenda e calendário</h4><p>Eventos do condomínio com sincronização Google.</p></div>
+<div class="card"><img src="img/prestadores.webp" width="800" height="617" loading="lazy" decoding="async" alt="Cadastro de prestadores de serviço e fornecedores"><h4>Prestadores e fornecedores</h4><p>Cadastro de prestadores por especialidade.</p></div>
+<div class="card"><img src="img/orcamentos.webp" width="800" height="617" loading="lazy" decoding="async" alt="Orçamentos e propostas de fornecedores"><h4>Orçamentos</h4><p>Propostas de fornecedores lado a lado.</p></div>
+<div class="card"><img src="img/reservas.webp" width="800" height="617" loading="lazy" decoding="async" alt="Reserva de espaços e áreas comuns"><h4>Reservas de áreas comuns</h4><p>Pedidos e aprovação de reservas.</p></div>
+<div class="card"><img src="img/ocorrencias.webp" width="800" height="617" loading="lazy" decoding="async" alt="Livro de ocorrências e ouvidoria"><h4>Ocorrências e ouvidoria</h4><p>Registro formal de ocorrências e sugestões.</p></div>
+</div></div>
+<div class="group"><h3>Portaria</h3><div class="grid">
+<div class="card"><img src="img/encomendas.webp" width="800" height="617" loading="lazy" decoding="async" alt="Gestão de recebimento de pacotes na portaria"><h4>Encomendas</h4><p>Registro de entregas na portaria e retirada.</p></div>
+<div class="card"><img src="img/entrada-garagem.webp" width="800" height="617" loading="lazy" decoding="async" alt="Solicitação de entrada e garagem"><h4>Entrada e garagem</h4><p>Autorização de visitantes, prestadores e vagas.</p></div>
+</div></div>
+<div class="group"><h3>Comunicação</h3><div class="grid">
+<div class="card"><img src="img/mural.webp" width="800" height="617" loading="lazy" decoding="async" alt="Mural de comunicados aos condôminos"><h4>Mural e comunicados</h4><p>Comunicados segmentados, com leitura e enquete.</p></div>
+</div></div>
+<div class="group"><h3>Cadastros</h3><div class="grid">
+<div class="card"><img src="img/torres-unidades.webp" width="800" height="617" loading="lazy" decoding="async" alt="Cadastro de torres e unidades"><h4>Torres e unidades</h4><p>Estrutura do prédio, com importação e exportação em planilha.</p></div>
+<div class="card"><img src="img/condominios.webp" width="800" height="617" loading="lazy" decoding="async" alt="Gestão de condomínios cadastrados"><h4>Condomínios</h4><p>Cadastro de cada condomínio da carteira.</p></div>
+</div></div>
+</div></section>
+
+<section id="ia" class="tint-b"><div class="wrap split">
+<div><p class="kicker">Inteligência artificial</p><h2>Syndic IA, o assistente do condomínio</h2>
+<p class="lead">O morador pergunta e o assistente responde com base na convenção, no regimento interno e nas atas do condomínio.</p>
+<ul class="check"><li>Respostas a partir dos documentos oficiais</li><li>Perguntas frequentes sugeridas na tela</li><li>Menos dúvidas repetidas para o síndico</li></ul></div>
+<img src="img/syndic-ia.webp" width="800" height="758" loading="lazy" decoding="async" alt="Conversa no Syndic IA respondendo dúvida de morador">
+</div></section>
+
+<section id="financeiro" class="alt"><div class="wrap">
+<p class="kicker">Financeiro</p><h2>Financeiro com prestação de contas</h2>
+<p class="lead">Do extrato ao relatório para o conselho fiscal.</p>
+<div class="split rev">
+<div class="stack">
+<img src="img/reembolso.webp" width="800" height="617" loading="lazy" decoding="async" alt="Reembolso do síndico com despesas e prestação de contas">
+</div>
+<div><ul class="check">
+<li><strong>Bancário e conciliação:</strong> contas, extratos, conciliação e boletos.</li>
+<li><strong>Reembolso do síndico:</strong> despesas pagas pelo síndico registradas e aprovadas, com prestação de contas.</li>
+<li><strong>Relatórios:</strong> exportação em PDF e Excel, incluindo balancete e inadimplência.</li></ul>
+<img src="img/relatorios.webp" width="940" height="261" loading="lazy" decoding="async" alt="Tela de relatórios e exportação em PDF e planilha"></div>
+</div></div></section>
+
+<section id="insumos" class="tint-g"><div class="wrap split">
+<div><p class="kicker">Portaria e zeladoria</p><h2>Limpeza e insumos sem papelada</h2>
+<p class="lead">A portaria monta o pedido de material, o síndico aprova e o pedido segue para o fornecedor pelo WhatsApp.</p>
+<ul class="check"><li>Controle de estoque de limpeza e insumos</li><li>Aprovação do síndico antes da compra</li><li>Envio do pedido ao fornecedor por WhatsApp</li></ul></div>
+<img src="img/limpeza-pedidos.webp" width="940" height="792" loading="lazy" decoding="async" alt="Pedidos de limpeza com etapas: solicitado pela portaria, enviado ao fornecedor por WhatsApp, compra confirmada e recebido">
+</div></section>
+
+<section id="para-quem" class="alt"><div class="wrap">
+<p class="kicker">Para quem</p><h2>Para quem é</h2>
+<div class="who">
+<article><h3>Síndico profissional</h3><p>Acompanhe vários condomínios no mesmo login, com agenda, manutenções e financeiro de cada um, e preste contas com relatórios prontos.</p></article>
+<article><h3>Administradoras</h3><p>Centralize a carteira de condomínios, a operação da portaria, os fornecedores e a comunicação com moradores em um só sistema.</p></article>
+</div></div></section>
+
+<section id="faq"><div class="wrap">
+<p class="kicker">Dúvidas</p><h2>Perguntas frequentes</h2>
+<details><summary>Dá para gerenciar mais de um condomínio?</summary><p>Sim. O sistema tem cadastro de condomínios, e o condomínio ativo é escolhido no topo da tela.</p></details>
+<details><summary>O sistema faz conciliação bancária?</summary><p>Sim. O módulo bancário reúne contas, extratos, conciliação e boletos.</p></details>
+<details><summary>Os relatórios podem ser exportados?</summary><p>Sim, em PDF e em planilha Excel.</p></details>
+<details><summary>Como funciona o Syndic IA?</summary><p>É um assistente que responde dúvidas com base na convenção, no regimento interno e nas atas cadastradas no condomínio.</p></details>
+<details><summary>O Syndic CRM já está disponível?</summary><p>O sistema está em fase de testes. Você pode conhecer a demonstração ou falar com a gente pelo WhatsApp.</p></details>
+</div></section>
+
+<section class="final"><div class="wrap"><p class="kicker">Demonstração</p>
+<h2>Conheça o Syndic CRM por dentro</h2>
+<p>Veja a demonstração com um condomínio de exemplo.</p>
+<div class="ctas"><a class="btn btn-g" href="https://demo.crm-syndic.com.br" rel="noopener">Ver demonstração</a><a class="btn btn-o" href="https://wa.me/5521978788211" rel="noopener">Falar no WhatsApp</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<p class="flogo"><img src="img/syndic-logo.svg" width="132" height="56" alt="Syndic CRM" loading="lazy"></p>
+<p><strong>Syndic CRM · Uma empresa Grupo Ícone-Rio</strong></p>
+<p>Rua Xavier da Silveira 45/1009, Copacabana, Rio de Janeiro-RJ, CEP 22061-010<br>CNPJ 02.634.709/0001-74<br><a href="mailto:contato@crm-syndic.com.br">contato@crm-syndic.com.br</a></p>
+</div></footer>
+</body></html>
