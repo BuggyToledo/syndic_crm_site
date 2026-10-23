@@ -1,0 +1,13 @@
+# Syndic CRM
+
+> Sistema de gestão de condomínios para síndico profissional e administradoras. Em fase de testes. Uma empresa Grupo Ícone-Rio (Rio de Janeiro, RJ).
+
+- Perfis: síndico, administradora, conselho fiscal e morador.
+- Módulos: financeiro, bancário e conciliação, patrimônio, reembolso do síndico, relatórios (PDF e Excel), manutenções e ordens de serviço, agenda, prestadores, orçamentos, reservas, ocorrências e ouvidoria, encomendas, entrada e garagem, mural de comunicados, limpeza e insumos, torres e unidades, vários condomínios.
+- Syndic IA: assistente que responde com base na convenção, no regimento interno e nas atas.
+- Preço: não divulgado.
+
+## Links
+- [Site](https://crm-syndic.com.br/)
+- [Demonstração](https://demo.crm-syndic.com.br)
+- Contato: contato@crm-syndic.com.br
