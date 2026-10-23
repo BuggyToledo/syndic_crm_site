@@ -1,6 +1,6 @@
 # Syndic CRM
 
-> Sistema de gestão de condomínios para síndico profissional e administradoras. Em fase de testes. Uma empresa Grupo Ícone-Rio (Rio de Janeiro, RJ).
+> Sistema de gestão de condomínios para síndico profissional e administradoras. Site em standby: o sistema ainda está em verificação e não está aberto ao público. Uma empresa Grupo Ícone-Rio (Rio de Janeiro, RJ).
 
 - Perfis: síndico, administradora, conselho fiscal e morador.
 - Módulos: financeiro, bancário e conciliação, patrimônio, reembolso do síndico, relatórios (PDF e Excel), manutenções e ordens de serviço, agenda, prestadores, orçamentos, reservas, ocorrências e ouvidoria, encomendas, entrada e garagem, mural de comunicados, limpeza e insumos, torres e unidades, vários condomínios.
