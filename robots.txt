@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crm-syndic.com.br/sitemap.xml
